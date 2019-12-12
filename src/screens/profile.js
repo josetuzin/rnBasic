@@ -7,12 +7,16 @@ import {
 } from 'react-native'
 
 class Profile extends Component {
+    handlePress = () => {
+        this.props.navigation.navigate('Home')
+    }
     render() {
         return (
             <View style={styles.container}>
                 <Text>Profile</Text>
                 <Button
                     title="Ir a la home"
+                    onPress={this.handlePress}
                 />
             </View>
         )
