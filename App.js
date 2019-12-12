@@ -19,6 +19,7 @@ import Home from './src/screens/home'
 import About from './src/screens/about'
 import Profile from './src/screens/profile'
 import Login from './src/screens/login'
+import Card from 'react-navigation/src/views/StackView/StackViewCard';
 
 const AppNavigator = createStackNavigator(
 //
@@ -44,12 +45,25 @@ const AppNavigator = createStackNavigator(
     //headerBackImage: <Text>🇦🇷</Text>
     headerBackImage: <Text>{`<=`}</Text>
     // header: <Text>Esto es un Header</Text>,
-
   },
   initialRouteKey: 'login',
   initialRouteParams: {
     nombre: 'José Tuzin'
   },
+  // headerMode: float screen none
+  // screen: al navergar, también se anima el header
+  // float: al navergar, el header queda fijo
+  //headerMode: 'none' // default android screen - default iOS float
+  headerMode: 'float',
+  // mode: modal o card - default en ambos: card
+  //mode: modal, // solo para iOS
+  mode: 'card',
+  cardStyle: {
+    borderWidth: 5,
+    // backgroundColor: 'red', // se aprecia el fondo con cards transparentes
+  },
+  // headerTransitionPreset: 'fade-in-place' 'uikit'
+  headerTransitionPreset: 'uikit',
 }
 )
 
