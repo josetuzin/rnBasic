@@ -32,7 +32,7 @@ const AppNavigator = createStackNavigator(
   },
   About,
   Profile,
-  //Login  //sacon login y la agrego al stack Main
+  //Login  //saco el login y lo agrego al stack Main
 },
 {
   initialRouteName: 'Home',

@@ -5,11 +5,20 @@ import {
     StyleSheet,
     Button,
 } from 'react-native'
+import { StackActions } from 'react-navigation' 
 
 class Home extends Component {
     handlePress = () => {
         // console.log(this.props.navigation.navigate('Login'))
-        this.props.navigation.navigate('Login')
+        //this.props.navigation.navigate('Login')
+
+        // la dife con .navigate('Login') es que la agrega al stack de navegación
+        this.props.navigation.dispatch(StackActions.push({
+            routeName: 'Login',
+            // params: {
+            //     ...
+            // }
+        }))
     }
     render() {
         return (
